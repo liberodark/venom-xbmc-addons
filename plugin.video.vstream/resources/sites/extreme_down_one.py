@@ -40,37 +40,25 @@ MOVIE_MOVIEHD_720P = (URL_MAIN + 'films-hd/bluray-720p/', 'showMovies') #films v
 MOVIE_MOVIEHD_1080P = (URL_MAIN + 'films-hd/bluray-1080p/', 'showMovies') #films vrac
 MOVIE_MOVIEHD_X265 = (URL_MAIN + 'films-hd/films-1080p-x265/', 'showMovies') #films vrac
 MOVIE_MOVIEHD_4K = (URL_MAIN + 'films-hd/ultrahd-4k/', 'showMovies') #films vrac
-MOVIE_VIEWS = (URL_MAIN + 'url', 'showMovies') #films (les plus vus)
-MOVIE_COMMENTS = (URL_MAIN + 'url', 'showMovies') #films (les plus commentés)
-MOVIE_NOTES = (URL_MAIN + 'url', 'showMovies') #films (les mieux notés)
 MOVIE_GENRES = (True, 'showGenres') #films genres
 MOVIE_ANNEES = (True, 'showMovieAnnees') #films (par années)
 
-#menu supplementaire non gerer par l'acceuil
-MOVIE_VF = (URL_MAIN + 'url', 'showMovies') #films VF
-MOVIE_VOSTFR = (URL_MAIN + 'url', 'showMovies') #films VOSTFR
-
 # menu serie existant dans l'acceuil (Home)
 SERIE_NEWS = (URL_MAIN + 'series/', 'showMovies') #séries (derniers ajouts)
-SERIE_HD = (URL_MAIN + 'series/', 'showMovies') #séries HD
+SERIE_HD = (URL_MAIN + 'series-hd/', 'showMovies') #séries HD
 SERIE_SERIES = (URL_MAIN + 'series/', 'showMovies') #séries vrac
 SERIE_GENRES = (True, 'showGenres') #séries genres
 SERIE_ANNEES = (True, 'showSerieAnnees') #séries (par années)
-SERIE_VFS = (URL_MAIN + 'series/', 'showMovies') #séries VF
-SERIE_VOSTFRS = (URL_MAIN + 'series/', 'showMovies') #séries Vostfr
+SERIE_VFS = (URL_MAIN + 'series/vf/', 'showMovies') #séries VF
+SERIE_VOSTFRS = (URL_MAIN + 'series/vostfr/', 'showMovies') #séries Vostfr
 
-ANIM_NEWS = (URL_MAIN + 'animes/', 'showMovies') #animés (derniers ajouts)
-ANIM_ANIMS = (URL_MAIN + 'animes', 'showMovies') #animés vrac
+ANIM_NEWS = (URL_MAIN + 'mangas/', 'showMovies') #animés (derniers ajouts)
+ANIM_ANIMS = (URL_MAIN + 'mangas/', 'showMovies') #animés vrac
 ANIM_GENRES = (True, 'showGenres') #anime genres
 ANIM_ANNEES = (True, 'showAnimesAnnees') #anime (par années)
-ANIM_VFS = (URL_MAIN + 'animes', 'showMovies') #animés VF
-ANIM_VOSTFRS = (URL_MAIN + 'animes', 'showMovies') #animés VOSTFR
-ANIM_ENFANTS = (URL_MAIN + 'animes', 'showMovies')
+ANIM_VFS = (URL_MAIN + 'mangas/series-vf/', 'showMovies') #animés VF
 
-DOC_DOCS = (URL_MAIN + 'url', 'showMovies') #Documentaire
-SPORT_SPORTS = (URL_MAIN + 'url', 'showMovies') #sport
-MOVIE_NETS = (URL_MAIN + 'url', 'showMovies') #video du net
-REPLAYTV_REPLAYTV = (URL_MAIN + 'url', 'showMovies') #Replay
+DOC_DOCS = (URL_MAIN + 'documentaires/', 'showMovies') #Documentaire
 
 def load(): #fonction chargee automatiquement par l'addon l'index de votre navigation.
     oGui = cGui() #ouvre l'affichage
@@ -161,9 +149,9 @@ def showGenres(): #affiche les genres
 
     #juste a entrer les categories et les liens qui vont bien
     liste = []
-    liste.append( ['Action',URL_MAIN + 'action/'] )
-    liste.append( ['Animation',URL_MAIN + 'animation/'] )
-    liste.append( ['Arts Martiaux',URL_MAIN + 'arts-martiaux/'] )
+    liste.append( ['Action',URL_MAIN + 'tags/Action/'] )
+    liste.append( ['Animation',URL_MAIN + 'tags/Animation/'] )
+    liste.append( ['Arts Martiaux',URL_MAIN + 'tags/Arts+Martiaux/'] )
     liste.append( ['Aventure',URL_MAIN + 'aventure/'] )
     liste.append( ['Biopic',URL_MAIN + 'biopic/'] )
     liste.append( ['Comédie',URL_MAIN + 'comedie/'] )
